@@ -16,10 +16,10 @@
     <maven.compiler.target>1.6</maven.compiler.target>
 </properties>
 
-</project>
-
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.0.2</version>
-    </dependency>
+</dependency>
+</project>
+
