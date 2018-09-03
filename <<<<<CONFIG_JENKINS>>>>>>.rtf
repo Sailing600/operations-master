@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red228\green233\blue232;\red29\green38\blue42;\red30\green128\blue240;
+}
+{\*\expandedcolortbl;;\cssrgb\c91373\c92941\c92941;\cssrgb\c14902\c19608\c21961;\cssrgb\c12941\c58824\c95294;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+D\'e9marr\'e9 par l'utilisateur {\field{\*\fldinst{HYPERLINK "http://78.238.153.168:8080/user/benjamin"}}{\fldrslt \cf4 Benjamin Leblond}}\
+Building in workspace /var/lib/jenkins/workspace/test\
+ > git rev-parse --is-inside-work-tree # timeout=10\
+Fetching changes from the remote Git repository\
+ > git config remote.origin.url {\field{\*\fldinst{HYPERLINK "https://github.com/Sailing600/operations-master.git"}}{\fldrslt \cf4 https://github.com/Sailing600/operations-master.git}} # timeout=10\
+Fetching upstream changes from {\field{\*\fldinst{HYPERLINK "https://github.com/Sailing600/operations-master.git"}}{\fldrslt \cf4 https://github.com/Sailing600/operations-master.git}}\
+ > git --version # timeout=10\
+ > git fetch --tags --progress {\field{\*\fldinst{HYPERLINK "https://github.com/Sailing600/operations-master.git"}}{\fldrslt \cf4 https://github.com/Sailing600/operations-master.git}} +refs/heads/*:refs/remotes/origin/*\
+ > git rev-parse refs/remotes/origin/master^\{commit\} # timeout=10\
+ > git rev-parse refs/remotes/origin/origin/master^\{commit\} # timeout=10\
+Checking out Revision 4412d2b764f7d8d171cfee56c00fcb92b36563b4 (refs/remotes/origin/master)\
+ > git config core.sparsecheckout # timeout=10\
+ > git checkout -f 4412d2b764f7d8d171cfee56c00fcb92b36563b4\
+Commit message: "change5"\
+ > git rev-list --no-walk b445efcf81ab7c871da9e0e7c8c24ca600fcbfd9 # timeout=10\
+Jenkins Artifactory Plugin version: 2.16.2\
+Injection des variables d'environnement SonarQube en utilisant la configuration: SonarQube\
+[test] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn -f pom.xml clean package\
+[INFO] Scanning for projects...\
+[INFO] \
+[INFO] -------------------------< fr.epsi:operations >-------------------------\
+[INFO] Building operations 3.0.2\
+[INFO] --------------------------------[ jar ]---------------------------------\
+[INFO] \
+[INFO] 
+\b --- maven-clean-plugin:2.5:clean (default-clean) @ operations ---\
+
+\b0 [INFO] Deleting /var/lib/jenkins/workspace/test/target\
+[INFO] \
+[INFO] 
+\b --- maven-resources-plugin:2.6:resources (default-resources) @ operations ---\
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!\
+
+\b0 [INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/test/src/main/resources\
+[INFO] \
+[INFO] 
+\b --- maven-compiler-plugin:3.1:compile (default-compile) @ operations ---\
+
+\b0 [INFO] Changes detected - recompiling the module!\
+
+\b [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!\
+
+\b0 [INFO] Compiling 1 source file to /var/lib/jenkins/workspace/test/target/classes\
+[INFO] \
+[INFO] 
+\b --- maven-resources-plugin:2.6:testResources (default-testResources) @ operations ---\
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!\
+
+\b0 [INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/test/src/test/resources\
+[INFO] \
+[INFO] 
+\b --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ operations ---\
+
+\b0 [INFO] Nothing to compile - all classes are up to date\
+[INFO] \
+[INFO] 
+\b --- maven-surefire-plugin:2.12.4:test (default-test) @ operations ---\
+
+\b0 [INFO] No tests to run.\
+[INFO] \
+[INFO] 
+\b --- maven-jar-plugin:2.4:jar (default-jar) @ operations ---\
+
+\b0 [INFO] Building jar: /var/lib/jenkins/workspace/test/target/operations-3.0.2.jar\
+[INFO] ------------------------------------------------------------------------\
+[INFO] BUILD SUCCESS\
+[INFO] ------------------------------------------------------------------------\
+[INFO] Total time: 7.098 s\
+[INFO] Finished at: 2018-09-03T11:39:13+02:00\
+[INFO] ------------------------------------------------------------------------\
+[test] $ /var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner -Dsonar.host.url={\field{\*\fldinst{HYPERLINK "https://sonarqube.benjamin-tourman.fr/"}}{\fldrslt \cf4 https://sonarqube.benjamin-tourman.fr/}} "-Dsonar.projectName=My project" -Dsonar.projectVersion=1.0 -Dsonar.projectKey=my:project -Dsonar.java.binaries=target/classes -Dsonar.sources=src -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/test\
+INFO: Scanner configuration file: /var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/conf/sonar-scanner.properties\
+INFO: Project root configuration file: NONE\
+INFO: SonarQube Scanner 3.1.0.1141\
+INFO: Java 9 Oracle Corporation (64-bit)\
+INFO: Linux 3.10.0-693.21.1.el7.x86_64 amd64\
+INFO: User cache: /var/lib/jenkins/.sonar/cache\
+INFO: SonarQube server 7.0.0\
+INFO: Default locale: "fr_FR", source code encoding: "UTF-8" (analysis is platform dependent)\
+INFO: Publish mode\
+INFO: Load global settings\
+INFO: Load global settings (done) | time=468ms\
+INFO: Server id: AWIuKX5bWQpsTBep2-E6\
+INFO: User cache: /var/lib/jenkins/.sonar/cache\
+INFO: Load plugins index\
+INFO: Load plugins index (done) | time=158ms\
+INFO: Load/download plugins\
+INFO: Load/download plugins (done) | time=398ms\
+INFO: Process project properties\
+INFO: Load project repositories\
+INFO: Load project repositories (done) | time=311ms\
+INFO: Execute project builders\
+INFO: Execute project builders (done) | time=0ms\
+INFO: Load quality profiles\
+INFO: Load quality profiles (done) | time=146ms\
+INFO: Load active rules\
+INFO: Load active rules (done) | time=2745ms\
+INFO: Load metrics repository\
+INFO: Load metrics repository (done) | time=202ms\
+INFO: Project key: my:project\
+INFO: -------------  Scan My project\
+INFO: Load server rules\
+INFO: Load server rules (done) | time=1232ms\
+INFO: Base dir: /var/lib/jenkins/workspace/test\
+INFO: Working dir: /var/lib/jenkins/workspace/test/.scannerwork\
+INFO: Source paths: src\
+INFO: Source encoding: UTF-8, default locale: fr_FR\
+INFO: Index files\
+INFO: 1 file indexed\
+INFO: Quality profile for java: Sonar way\
+WARNING: An illegal reflective access operation has occurred\
+WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$1 (file:/var/lib/jenkins/.sonar/cache/132aaa5c3a6da2c09af83d327b1fc182/sonar-javascript-plugin-4.1.0.6085.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)\
+WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$1\
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\
+WARNING: All illegal access operations will be denied in a future release\
+INFO: Sensor JavaSquidSensor [java]\
+INFO: Configured Java source version (sonar.java.source): none\
+INFO: JavaClasspath initialization\
+WARN: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property\
+INFO: JavaClasspath initialization (done) | time=45ms\
+INFO: JavaTestClasspath initialization\
+INFO: JavaTestClasspath initialization (done) | time=0ms\
+INFO: Java Main Files AST scan\
+INFO: 1 source files to be analyzed\
+INFO: Java Main Files AST scan (done) | time=2720ms\
+INFO: Java Test Files AST scan\
+INFO: 0 source files to be analyzed\
+INFO: Java Test Files AST scan (done) | time=13ms\
+INFO: Sensor JavaSquidSensor [java] (done) | time=5053ms\
+INFO: Sensor SurefireSensor [java]\
+INFO: parsing [/var/lib/jenkins/workspace/test/target/surefire-reports]\
+INFO: Sensor SurefireSensor [java] (done) | time=3ms\
+INFO: Sensor JaCoCoSensor [java]\
+INFO: Sensor JaCoCoSensor [java] (done) | time=2ms\
+INFO: Sensor SonarJavaXmlFileSensor [java]\
+INFO: Sensor SonarJavaXmlFileSensor [java] (done) | time=0ms\
+INFO: Sensor Zero Coverage Sensor\
+INFO: 1/1 source files have been analyzed\
+INFO: 0/0 source files have been analyzed\
+INFO: Sensor Zero Coverage Sensor (done) | time=112ms\
+INFO: Sensor CPD Block Indexer\
+INFO: Sensor CPD Block Indexer (done) | time=65ms\
+INFO: Calculating CPD for 1 file\
+INFO: CPD calculation finished\
+INFO: Analysis report generated in 409ms, dir size=26 KB\
+INFO: Analysis reports compressed in 89ms, zip size=8 KB\
+INFO: Analysis report uploaded in 1646ms\
+INFO: ANALYSIS SUCCESSFUL, you can browse {\field{\*\fldinst{HYPERLINK "https://sonarqube.benjamin-tourman.fr/dashboard/index/my:project"}}{\fldrslt \cf4 https://sonarqube.benjamin-tourman.fr/dashboard/index/my:project}}\
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report\
+INFO: More about the report processing at {\field{\*\fldinst{HYPERLINK "https://sonarqube.benjamin-tourman.fr/api/ce/task?id=AWWezVxTybf73d3B4zi4"}}{\fldrslt \cf4 https://sonarqube.benjamin-tourman.fr/api/ce/task?id=AWWezVxTybf73d3B4zi4}}\
+INFO: Task total time: 21.455 s\
+INFO: ------------------------------------------------------------------------\
+INFO: EXECUTION SUCCESS\
+INFO: ------------------------------------------------------------------------\
+INFO: Total time: 30.854s\
+INFO: Final Memory: 16M/131M\
+INFO: ------------------------------------------------------------------------\
+Jenkins Artifactory Plugin version: 2.16.2\
+Artifactory integration is enabled\
+[test] $ /var/lib/jenkins/tools/hudson.model.JDK/jdk/bin/java -classpath /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/boot/* -Dmaven.home=/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven -Dmaven.conf=/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/conf -DbuildInfoConfig.propertiesFile=/var/lib/jenkins/workspace/test@tmp/buildInfo2047820671980694031.properties -DbuildInfoConfig.artifactoryResolutionEnabled=true -Dm3plugin.lib=/var/lib/jenkins/workspace/test/cache/artifactory-plugin/2.16.2 -Dclassworlds.conf=/var/lib/jenkins/workspace/test/classworlds704663823467211403conf -Dmaven.multiModuleProjectDirectory=/var/lib/jenkins/workspace/test/pom.xml org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml clean install\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Scanning for projects...\
+[main] INFO org.jfrog.build.extractor.maven.BuildInfoRecorder - Initializing Artifactory Build-Info Recording\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - \
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - -------------------------< fr.epsi:operations >-------------------------\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Building operations 3.0.2\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - --------------------------------[ jar ]---------------------------------\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - BUILD FAILURE\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Total time: 0.751 s\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - Finished at: 2018-09-03T11:39:57+02:00\
+[main] INFO org.apache.maven.cli.event.ExecutionEventLogger - ------------------------------------------------------------------------\
+[main] ERROR org.apache.maven.cli.MavenCli - Plugin org.apache.maven.plugins:maven-clean-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5: Failure to find org.apache.maven.plugins:maven-plugins:pom:22 in {\field{\*\fldinst{HYPERLINK "https://artifactory.benjamin-tourman.fr/artifactory/repos"}}{\fldrslt \cf4 https://artifactory.benjamin-tourman.fr/artifactory/repos}} was cached in the local repository, resolution will not be reattempted until the update interval of artifactory-release has elapsed or updates are forced -> [Help 1]\
+[main] ERROR org.apache.maven.cli.MavenCli - \
+[main] ERROR org.apache.maven.cli.MavenCli - To see the full stack trace of the errors, re-run Maven with the -e switch.\
+[main] ERROR org.apache.maven.cli.MavenCli - Re-run Maven using the -X switch to enable full debug logging.\
+[main] ERROR org.apache.maven.cli.MavenCli - \
+[main] ERROR org.apache.maven.cli.MavenCli - For more information about the errors and possible solutions, please read the following articles:\
+[main] ERROR org.apache.maven.cli.MavenCli - [Help 1] {\field{\*\fldinst{HYPERLINK "http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException"}}{\fldrslt \cf4 http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException}}\
+Build step 'Invoke Artifactory Maven 3' changed build result to FAILURE\
+Build step 'Invoke Artifactory Maven 3' marked build as failure\
+Global Slack Notifier try posting to slack. However some error occurred\
+TeamDomain :\
+Channel :#g\'e9n\'e9ral\
+Message :Fail Build\
+\
+Finished: FAILURE}
